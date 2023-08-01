@@ -2,12 +2,16 @@
 require 'vendor/autoload.php'; // Include Composer autoloader
 
 use Dompdf\Dompdf;
+use Dompdf\Options;
 
 // Read the HTML content from the "pdf.html" file
 $html = file_get_contents('pdf.html');
 
+$options = new Options();
+$options->set('isRemoteEnabled', true);
+
 // Create a new Dompdf instance
-$dompdf = new Dompdf();
+$dompdf = new Dompdf($options);
 
 // Load the HTML into the Dompdf instance
 $dompdf->loadHtml($html);
