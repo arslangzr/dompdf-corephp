@@ -1,18 +1,41 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Sample PDF</title>
     <link rel="stylesheet" href="/assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;500&display=swap" rel="stylesheet">
     <style>
-        h1, p{
+        h1,
+        p {
             font-family: 'Sen', sans-serif;
+        }
+
+        @page {
+            margin: 0in;
+        }
+
+        body {
+            background-color: blue;
+            padding: 1in;
+        }
+
+        #wrapper {
+            background-color: yellow;
+            width: 95%;
+            height: 95%;
+            padding: 5%;
         }
     </style>
 </head>
+
 <body>
-    <h1>Hello, World!</h1>
-    <p>This is a sample PDF generated using dompdf in Core PHP. The contents are rendered from an external file now.</p>
-    <img src="https://cdn.britannica.com/84/73184-050-05ED59CB/Sunflower-field-Fargo-North-Dakota.jpg" alt="Flower">
+    <div id="wrapper">
+        <h1>Hello, World!</h1>
+        <p>This is a sample PDF generated using dompdf in Core PHP. The contents are rendered from an external file now.
+        </p>
+        <img src="https://cdn.britannica.com/84/73184-050-05ED59CB/Sunflower-field-Fargo-North-Dakota.jpg" alt="Flower">
+    </div>
 </body>
+
 </html>
