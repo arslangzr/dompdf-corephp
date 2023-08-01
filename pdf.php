@@ -8,7 +8,7 @@ use Dompdf\Options;
 $html = file_get_contents('pdf.html');
 
 $options = new Options();
-$options->set('isRemoteEnabled', false);
+$options->set('isRemoteEnabled', true);
 $options->set('chroot', './assets/images'); // Set the base path for local images
 
 // Create a new Dompdf instance
